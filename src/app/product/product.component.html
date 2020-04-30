@@ -1,0 +1,48 @@
+
+<div>
+    <hr>
+    <a routerLink="about" style="text-decoration: none; padding-right: 20px; color:darkgray;">About</a>
+    <a routerLink="contactus" style="text-decoration: none; padding-right: 20px; color:darkgray;">Contact Us</a>
+    <button type="submit" style="float: right; background-color: cornsilk; border-radius: 5px;"
+        (click)="logout()">Logout</button>
+    <hr>
+</div>
+<br><br>
+<fieldset>
+    <legend style="text-align: center; font-size: 25px;">Products</legend>
+    <table   style="border-color: darkgrey; border-style: ridge; text-align: left;">
+        <th>Name</th>
+        <th>Manufact.-Date</th>
+        <th>Expiry-Date</th>
+        <th>Brand</th>
+        <th>currency</th>
+        <tr>
+            <td style="padding-right: 50px;">{{productlist[0].name}}</td>
+            <td style="padding-right: 50px;">{{productlist[0].manufdate| date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[0].expdate | date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[0].brand}}</td>
+            <td style="padding-right: 50px;">{{productlist[0].price | currency:"USD":true}}</td>
+        </tr>
+        <tr>{{productlist[1].name}}<td style="padding-right: 50px;">{{productlist[1].manufdate| date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[1].expdate | date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[1].brand}}</td>
+            <td style="padding-right: 50px;">{{productlist[1].price | currency:"USD":true}}</td>
+        </tr>
+        <tr>{{productlist[2].name}}<td style="padding-right: 50px;">{{productlist[2].manufdate| date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[2].expdate | date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[2].brand}}</td>
+            <td style="padding-right: 50px;">{{productlist[2].price | currency:"USD":true}}</td>
+        </tr>
+        <tr>{{productlist[3].name}}<td style="padding-right: 50px;">{{productlist[3].manufdate| date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[3].expdate | date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[3].brand}}</td>
+            <td style="padding-right: 50px;">{{productlist[3].price | currency:"USD":true}}</td>
+        </tr>
+        <tr>{{productlist[4].name}}<td style="padding-right: 50px;">{{productlist[4].manufdate| date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[4].expdate | date:'shortDate'}}</td>
+            <td style="padding-right: 50px;">{{productlist[4].brand}}</td>
+            <td style="padding-right: 50px;">{{productlist[4].price | currency:"USD":true}}</td>
+        </tr>
+
+    </table>
+</fieldset>
